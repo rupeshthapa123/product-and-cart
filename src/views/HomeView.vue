@@ -12,7 +12,7 @@
 
         <div class="recommended">
 
-          <ProductCardVue
+          <ProductCard
             v-for="(product, index) in inventory.slice(0,3)"
             :key="product.id"
             class="card"
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import ProductCardVue from '@/components/ProductCard.vue'
+import ProductCard from '@/components/ProductCard.vue'
 export default {
   name: 'HomeView',
   props: ['inventory', 'addToCart'],
   components: {
-    ProductCardVue
+    ProductCard
   }
 }
 </script>
